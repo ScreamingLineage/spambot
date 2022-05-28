@@ -1,5 +1,5 @@
 # spambot
-A Python script which can spam the contents of a file or a word repeatedly to any chat
+A Python script which can spam the contents of a file or a word repeatedly to any chat.
 
 The bot goes through a file line by line and spams it wherever the text cursor is placed. A line break in the text file is considered to be "Enter" or the send message key.
 
