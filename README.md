@@ -1,7 +1,18 @@
 # spambot
-A Python script which can spam the contents of a file or a word repeatedly to any chat.
+A Python script which can spam the contents of a file or word(s) repeatedly to any chat.
 
-The bot goes through a file line by line and spams it wherever the text cursor is placed. A line break in the text file is considered to be "Enter" or the send message key.
+## Contents
+  1.  [Introduction](#introduction)
+  2.  [Usage](#usage)
+      - [Choosing an Input Option](#input-options)
+      - [Adding Further Options](#other-options)
+      - [Miscellaneous Options](#miscellaneous-options)
+
+---
+
+## Introduction
+
+The bot goes through a file line by line and spams its contents wherever the text cursor is placed. A line break in the text file is considered to be "Enter" or the send message key.
 
 For example if you want this to be spammed in some chat
 ```
@@ -10,10 +21,8 @@ message 1: you guys should see it
 message 1: heres the link
 message 1: https://www.youtube.com/watch?v=dBv9BMSPaA8
 ```
-the text file (spam_vid.txt in this case) should be formatted like 
+the text file (`spam_vid.txt` in this case) should be formatted like 
 ```
-spam_vid.txt
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 just watched an insane video
 you guys should see it
 heres the link
@@ -41,13 +50,13 @@ options:
                         directory to search for text files to display menu (only takes an absolute path)
                         [Default - Current Directory]
 ```
-
-### `--file`, `--string` and `--menu`
+### Input Options
+#### `--file`, `--string` and `--menu`
 
 Either of the above options can be used to give the bot some text to spam.
-However only one can be used at once
+However only one of them can be used at at a time.
 
-  - `-f` or `--file` - denote a file to be spammed 
+  - `-f` or `--file` - denote a file to be spammed (if the file contains spaces or some special characters then it is recommended to place it within quotes)
   - `-s` or `--string` - denote a word or a sentence (enclosed within quotes) 
 
 Examples - 
@@ -69,24 +78,24 @@ Detected Text Files in Directory:-
 
 Choose File to Spam:
 ```
-
-### `--interval`, `--wait` and `--count`
+### Other Options
+#### `--interval`, `--wait` and `--count`
 
 These options can be used to further fine tune the spambot
 
-  - `-i` or `--interval` - set the time delay between 2 successive messages (in seconds) (`0` for the minimum possible interval) [Default: `3`]
-  - `-w` or `--wait` - change the time the bot waits before spamming begins (in seconds) (`0` to skip waiting entirely) [Default: `10`]
-  - `-c` or `--count` - set the number of times the text or file contents are spammed (if set for a file, the file will be spammed again from the beginning once it reaches the end) (`-1` to keep spamming infinitely) [Default: `-1`]
+  - `-i` or `--interval` - set the time delay between 2 successive messages (in **seconds**) (**0** for the minimum possible interval) [Default: **3**]
+  - `-w` or `--wait` - change the time the bot waits before spamming begins (in **seconds**) (**0** to skip waiting entirely) [Default: **10**]
+  - `-c` or `--count` - set the total number of times the text or file contents are spammed (for a file, it will be spammed again from the beginning once it reaches the end) (**-1** to keep spamming infinitely) [Default: **-1**]
 
 Example -
 
-  - `spambot.py -f "test.txt" -c 2 -i 1 -w 3` - This will spam the contents of `test.txt`, `2` times with `1` second between each message. The bot also waits for `3` seconds after the command is executed before starting to spam
+  - `spambot.py -f "test.txt" -c 2 -i 1 -w 3` - This will spam the contents of `test.txt`, **2** times with **1** second between each message. The bot also waits for **3** seconds after the command is executed before starting to spam
 
-### `--directory`
+### Miscellaneous Options
+#### `--directory`
 
 This is a sub-command for `--menu` and is useless without that. It can used to set the directory which the bot searches for text files to display in the menu. By default `--menu` searches the current directory where the terminal is open (**NOT** the directory where `spambot.py` is placed).
 The `--directory` option also requires an absolute path and wont work with a relative one.
 
-
-
+Example - `spambot.py -m -d "/path/to/text/files"` - will search for files to display in `/path/to/text/files`
 
