@@ -134,7 +134,7 @@ def parse_args():
 
     parser.add_argument('-d', '--directory', type=str, default = CURRENT_DIRECTORY,
                         help=f'directory to search for text files to display menu \
-                        (only takes an absolute path) [Default - {CURRENT_DIRECTORY} (Current Directory)')
+                        (only takes an absolute path) [Default - {CURRENT_DIRECTORY} (Current Directory)]')
     args = parser.parse_args()
     return args
 
