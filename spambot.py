@@ -10,6 +10,7 @@ import os
 # Default values
 INTERVAL_TIME = 3
 WAIT_TIME = 10
+SPAM_COUNT = -1
 CURRENT_DIRECTORY = os.getcwd()
 
 
@@ -131,8 +132,8 @@ def parse_args():
     parser.add_argument('-w', '--wait', type=int, default = WAIT_TIME,
                         help=f'time before spamming starts (in seconds) (0 to prevent waiting) [Default = {WAIT_TIME}]')
 
-    parser.add_argument('-c', '--count', type=run_count, default = -1,
-                        help='number of times repeat spamming (-1 to never stop) [Default = -1]')
+    parser.add_argument('-c', '--count', type=run_count, default = SPAM_COUNT,
+                        help=f'number of times repeat spamming (-1 to never stop) [Default = {SPAM_COUNT}]')
 
     parser.add_argument('-d', '--directory', type=str, default = CURRENT_DIRECTORY,
                         help=f'directory to search for text files to display menu \
