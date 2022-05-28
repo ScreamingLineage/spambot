@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import pyautogui
 import argparse
 import time
