@@ -111,7 +111,7 @@ def run_count(arg):
 
 
 # Command line options
-def parse_args():
+def get_args():
     parser = argparse.ArgumentParser(
              description="Spam the contents of a text file in a chat")
     spam_input = parser.add_mutually_exclusive_group(required=True)
@@ -162,5 +162,4 @@ def main(args):
         file_spammer(spammer_file, args.interval, args.count)
 
                 
-args = parse_args()
-main(args)
+main(get_args())
