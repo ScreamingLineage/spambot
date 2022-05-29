@@ -56,8 +56,8 @@ options:
 Either of the above options can be used to give the bot some text to spam.
 However only one of them can be used at at a time.
 
-  - `-f` or `--file` - denote a file to be spammed (if the file contains spaces or some special characters then it is recommended to place it within quotes)
-  - `-s` or `--string` - denote a word or a sentence (enclosed within quotes) 
+  - `-f`, `--file` - denote a file to be spammed (if the file contains spaces or some special characters then it is recommended to place it within quotes)
+  - `-s`, `--string` - denote a word or a sentence (enclosed within quotes) 
 
 Examples - 
 
@@ -65,7 +65,7 @@ Examples -
 
 `spambot.py -s "This is a spam message"`
 
-  - `-m` or `--menu` - displays a menu to choose a text file from the current directory
+  - `-m`, `--menu` - displays a menu to choose a text file from the current directory
 
 Example - `spambot.py -m` will display a menu similar to the one below
 ```
@@ -83,18 +83,18 @@ Choose File to Spam:
 
 These options can be used to further fine tune the spambot
 
-  - `-i` or `--interval` - set the time delay between 2 successive messages (in **seconds**) (**0** for the minimum possible interval) [Default: **3**]
-  - `-w` or `--wait` - change the time the bot waits before spamming begins (in **seconds**) (**0** to skip waiting entirely) [Default: **10**]
-  - `-c` or `--count` - set the total number of times the text or file contents are spammed (for a file, it will be spammed again from the beginning once it reaches the end) (**-1** to keep spamming infinitely) [Default: **-1**]
+  - `-i`, `--interval` - set the time delay between 2 successive messages (in **seconds**) (**0** for the minimum possible interval) [Default: **3**]
+  - `-w`, `--wait` - change the time the bot waits before spamming begins (in **seconds**) (**0** to skip waiting entirely) [Default: **10**]
+  - `-c`, `--count` - set the total number of times the text or file contents are spammed (for a file, it will be spammed again from the beginning once it reaches the end) (**-1** to keep spamming infinitely) [Default: **-1**]
 
 Example -
 
   - `spambot.py -f "test.txt" -c 2 -i 1 -w 3` - This will spam the contents of `test.txt`, **2** times with **1** second between each message. The bot also waits for **3** seconds after the command is executed before starting to spam
 
 ### Miscellaneous Options
-#### `--directory`
+#### `-d`, `--directory`
 
-This is a sub-command for `--menu` and is useless without that. It can used to set the directory which the bot searches for text files to display in the menu. By default `--menu` searches the current directory where the terminal is open (**NOT** the directory where `spambot.py` is placed).
+This is a sub-command for `--menu` and is useless without the latter. It can used to set the directory which the bot searches for text files to display in the menu. By default `--menu` searches the current directory where the terminal is open (**NOT** the directory where `spambot.py` is placed).
 The `--directory` option also requires an absolute path and wont work with a relative one.
 
 Example - `spambot.py -m -d "/path/to/text/files"` - will search for files to display in `/path/to/text/files`
