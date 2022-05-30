@@ -28,10 +28,10 @@ you guys should see it
 heres the link
 https://www.youtube.com/watch?v=dBv9BMSPaA8
 ```
-and the command would be `spambot.py -f spam_vid.txt` 
+and the command would be `spambot -f spam_vid.txt` 
 
 ## Usage
-```usage: spambot.py [-h] (-f FILE | -s STRING | -m) [-i INTERVAL] [-w WAIT] [-c COUNT] [-d DIRECTORY]
+```usage: spambot [-h] (-f FILE | -s STRING | -m) [-i INTERVAL] [-w WAIT] [-c COUNT] [-d DIRECTORY]
 
 Spam the contents of a text file in a chat
 
@@ -61,13 +61,13 @@ However only one of them can be used at at a time.
 
 Examples - 
 
-`spambot.py -f spam.txt`
+`spambot -f spam.txt`
 
-`spambot.py -s "This is a spam message"`
+`spambot -s "This is a spam message"`
 
   - `-m`, `--menu` - displays a menu to choose a text file from the current directory
 
-Example - `spambot.py -m` will display a menu similar to the one below
+Example - `spambot -m` will display a menu similar to the one below
 ```
 Detected Text Files in Directory:-
 
@@ -89,13 +89,13 @@ These options can be used to further fine tune the spambot
 
 Example -
 
-  - `spambot.py -f "test.txt" -c 2 -i 1 -w 3` - This will spam the contents of `test.txt`, **2** times with **1** second between each message. The bot also waits for **3** seconds after the command is executed before starting to spam
+  - `spambot -f "test.txt" -c 2 -i 1 -w 3` - This will spam the contents of `test.txt`, **2** times with **1** second between each message. The bot also waits for **3** seconds after the command is executed before starting to spam
 
 ### Miscellaneous Options
 #### `-d`, `--directory`
 
-This is a sub-command for `--menu` and is useless without the latter. It can used to set the directory which the bot searches for text files to display in the menu. By default `--menu` searches the current directory where the terminal is open (**NOT** the directory where `spambot.py` is placed).
+This is a sub-command for `--menu` and is useless without the latter. It can used to set the directory which the bot searches for text files to display in the menu. By default `--menu` searches the current directory where the terminal is open (**NOT** the directory where the `spambot` script is placed).
 The `--directory` option also requires an absolute path and wont work with a relative one.
 
-Example - `spambot.py -m -d "/path/to/text/files"` - will search for files to display in `/path/to/text/files`
+Example - `spambot -m -d "/path/to/text/files"` - will search for files to display in `/path/to/text/files`
 
